@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">ExpenseTracker</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="hint_UserName">User Name</string>
+    <string name="hint_Name">Nama</string>
+    <string name="hint_Email">Email</string>
+    <string name="hint_Password">Password</string>
+    <string name="hint_RePassword">RePassword</string>
+    <string name="btnLogin">Login</string>
+    <string name="btnRegister">Register</string>
+
+
+</resources>
