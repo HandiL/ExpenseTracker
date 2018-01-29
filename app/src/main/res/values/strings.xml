@@ -10,6 +10,13 @@
     <string name="hint_RePassword">RePassword</string>
     <string name="btnLogin">Login</string>
     <string name="btnRegister">Register</string>
-
+    <string name="btnAdd">Add</string>
+    <string name="txtCategory">Category</string>
+    <string name="txtAmount">Amount</string>
+    <string name="txtCategoryName">Category Name</string>
+    <string name="txtExpense">Expense</string>
+    <string name="txtIncome">Income</string>
+    <string name="txtOverView">OverView</string>
+    <string name="txtLogOut">Logout</string>
 
 </resources>
