@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CalendarView;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -15,14 +16,14 @@ public class Income extends AppCompatActivity {
     @BindView(R.id.txtAmount)
     EditText txtAmount;
 
-    @BindView(R.id.cmbCategoryExpense)
-    Spinner cmbCategoryExpense;
+    @BindView(R.id.cmbCategoryIncome)
+    Spinner cmbCategoryIncome;
 
     @BindView(R.id.calendarView)
     CalendarView calendarView;
 
     @BindView(R.id.btnAdd)
-    Spinner btnAdd;
+    Button btnAdd;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

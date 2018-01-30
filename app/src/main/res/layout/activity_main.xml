@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:alpha="0.5"
-        android:background="@color/colorPrimary"
+        android:background="@color/ColorMainMenu"
         android:onClick="btnExpenseClick">
 
         <TextView
@@ -37,7 +37,7 @@
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:alpha="0.5"
-        android:background="@color/colorPrimary">
+        android:background="@color/ColorMainMenu">
 
         <TextView
             android:id="@+id/textView11"
@@ -59,7 +59,7 @@
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:alpha="0.5"
-        android:background="@color/colorPrimary"
+        android:background="@color/ColorMainMenu"
         android:onClick="btnOverViewClick">
 
         <TextView
@@ -81,7 +81,7 @@
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:alpha="0.5"
-        android:background="@color/colorPrimary">
+        android:background="@color/ColorMainMenu">
 
         <TextView
             android:id="@+id/textView14"
