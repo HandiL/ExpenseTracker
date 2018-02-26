@@ -7,13 +7,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
+
+import com.handi.expensetracker.Entity.UserData;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class Register extends AppCompatActivity {
-    @BindView(R.id.txtUserName)
-    EditText txtUserName;
     @BindView(R.id.txtNama) EditText txtNama;
     @BindView(R.id.txtEmail) EditText txtEmail;
     @BindView(R.id.txtPassword) EditText txtPass;
@@ -24,13 +25,26 @@ public class Register extends AppCompatActivity {
         setContentView(R.layout.activity_register);
         ButterKnife.bind(this);
     }
+    public void openLoginActivity(UserData userData){
+        if(userData.getStatus()==1 && userData != null){
+            Toast.makeText(this,userData.getMsg(),Toast.LENGTH_SHORT).show();
+            Intent move=new Intent(Register.this,Login.class);
+            this.startActivity(move);
+            this.finish();
+        }
+        else{
+            Toast.makeText(this,this.getResources().getString(R.string.T_Register_Failed),Toast.LENGTH_SHORT).show();
+        }
+    }
     public void btnRegisterClicked(View view)
     {
-        if(!txtEmail.getText().toString().trim().isEmpty() && !txtNama.getText().toString().trim().isEmpty()&& !txtPass.getText().toString().trim().isEmpty() && !txtRepass.getText().toString().trim().isEmpty()&& !txtUserName.getText().toString().trim().isEmpty())
+        if(!txtEmail.getText().toString().trim().isEmpty() && !txtNama.getText().toString().trim().isEmpty()&& !txtPass.getText().toString().trim().isEmpty() && !txtRepass.getText().toString().trim().isEmpty())
         {
             if(txtPass.getText().toString().trim().equals(txtRepass.getText().toString().trim()))
             {
-                new AlertDialog.Builder(Register.this).setMessage("Apakah Anda yakin?").setCancelable(true).setPositiveButton("Ya", new DialogInterface.OnClickListener() {
+                AddUserTask addUserTask = new AddUserTask(this);
+                addUserTask.execute(txtEmail.getText().toString().trim(),txtPass.getText().toString().trim(),txtNama.getText().toString().trim());
+                /*new AlertDialog.Builder(Register.this).setMessage("Apakah Anda yakin?").setCancelable(true).setPositiveButton("Ya", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         Intent myIntent = new Intent(Register.this,
@@ -42,8 +56,7 @@ public class Register extends AppCompatActivity {
                     public void onClick(DialogInterface dialog, int which) {
 
                     }
-                }).show();
-
+                }).show();*/
             }
             else
             {

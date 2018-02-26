@@ -40,16 +40,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/hint_UserName"
+                    android:text="@string/hint_Email"
                     android:textSize="@dimen/size_Font" />
 
                 <EditText
-                    android:id="@+id/txtUserName"
+                    android:id="@+id/txtEmail"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
                     android:ems="10"
-                    android:hint="@string/hint_UserName"
+                    android:hint="@string/hint_Email"
                     android:inputType="textPersonName" />
 
             </TableRow>

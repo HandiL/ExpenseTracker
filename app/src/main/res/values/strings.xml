@@ -19,4 +19,6 @@
     <string name="txtOverView">OverView</string>
     <string name="txtLogOut">Logout</string>
     <string name="lblDate">Date</string>
+    <string name="T_user_not_valid"> User Not Valid</string>
+    <string name="T_Register_Failed"> Failed to Register</string>
 </resources>
